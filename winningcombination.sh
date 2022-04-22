@@ -204,7 +204,7 @@ for(( i=0; i<13; i++ ))
 do
 	for (( j=i+1; j<13; j++ ))
 	do
-		if [ $(echo "${arr[i]}<${arr[j]}"|bc) -eq 1 ]
+		if [ `echo ${arr[i]} ${arr[j]} | awk '{if($1<$2) print 1}'` ]
 		then
 			temp=${arr[i]}
 			arr[i]=${arr[j]}
