@@ -6,8 +6,9 @@ i=0
 read -p "flip the coin : " c
 while [[ $i -ne $c ]]
 do
-        coin=$((RANDOM%2))
-        if [[ $coin -eq 1 ]]
+        coin1=$((RANDOM%2))
+	coin2=$((RANDOM%2))
+        if [[ $coin1 -eq 1 & $coin2  ]]
                 then
                         echo "Heads"
                         ((Heads++))
